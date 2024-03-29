@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import { appleImg } from '../utils';
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
-  )
-}
+    <header>
+      <nav>
+        <img src={appleImg} />
+      </nav>
+    </header>
+  );
+};
 
-export default Navbar
+export default Navbar;
