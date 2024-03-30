@@ -14,7 +14,7 @@ import framemv from "/assets/videos/frame.mp4";
 import apple from "/assets/images/apple.svg";
 import search from "/assets/images/search.svg";
 import bag from "/assets/images/bag.svg";
-import watch from "/assets/images/watch.svg";
+import watch from "/public/assets/images/watch.svg";
 import right from "/assets/images/right.svg";
 import replay from "/assets/images/replay.svg";
 import play from "/assets/images/play.svg";
