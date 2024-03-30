@@ -38,7 +38,7 @@ const VideoCarousel = () => {
   }, [isEnd, videoId])
 
   useEffect(() => {
-    if(loadedData,length > 3) {
+    if(loadedData.length > 3) {
         if(!isPlaying) {
             videoRef.current[videoId].pause();
         }
@@ -47,6 +47,8 @@ const VideoCarousel = () => {
         }
     }
   }, [startPlay, videoId, isPlaying, loadedData])
+
+  const handleLoadedMetadata = (i, e) => setLoadedData((pre) => [...pre, e]) 
 
   useEffect(() => {
     const currentProgress = 0;
@@ -101,6 +103,7 @@ const VideoCarousel = () => {
                             ...prevVideo, isPlaying: true
                         }))
                     }}
+                    onLoadedMetadata={(e) => handleLoadedMetadata(i, e)}
                 >
                   <source src={list.video} type="video/mp4" />
                 </video>
