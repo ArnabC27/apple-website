@@ -1,8 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { hightlightsSlides } from "../constants";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import { pauseImg, playImg, replayImg } from "../utils";
 import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const VideoCarousel = () => {
   const videoRef = useRef([]);
@@ -64,7 +67,7 @@ const VideoCarousel = () => {
         onUpdate: () => {
           const progress = Math.ceil(anim.progress() * 100);
 
-          if (progress != currentProgress) {
+          if (progress !== currentProgress) {
             currentProgress = progress;
 
             gsap.to(videoDivRef.current[videoId], {
@@ -127,6 +130,9 @@ const VideoCarousel = () => {
       case "play":
         setVideo((pre) => ({ ...pre, isPlaying: !pre.isPlaying }));
         break;
+      case "pause":
+        setVideo((pre) => ({ ...pre, isPlaying: !pre.isPlaying }));
+        break;
       default:
         return video;
     }
@@ -144,6 +150,10 @@ const VideoCarousel = () => {
                   playsInline={true}
                   preload="auto"
                   muted
+                  className={`${
+                    list.id === 2 && 'translate-x-44'}
+                    pointer-events-none
+                  `}
                   ref={(el) => (videoRef.current[i] = el)}
                   onEnded={() =>
                     i !== 3
