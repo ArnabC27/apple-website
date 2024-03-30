@@ -42,7 +42,7 @@ const Hero = () => {
         <p id="hero" className="hero-title">
           iPhone 15 Pro
         </p>
-        <div className="w-9/12 md:w-10/12">
+        <div className="w-7/12 md:w-10/12">
           <video
             className="pointer-events-none"
             autoPlay
