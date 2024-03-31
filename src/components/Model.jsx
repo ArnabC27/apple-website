@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ModelView from "./ModelView";
 import { yellowImg } from "../utils";
 import * as THREE from "three";
@@ -24,6 +24,18 @@ const Model = () => {
 
   const [smallRotation, setSmallRotation] = useState(0);
   const [largeRotation, setLargeRotation] = useState(0);
+
+  const tl = gsap.timeline();
+
+  useEffect(() => {
+    if(size === 'large') {
+
+    }
+
+    if(size === 'small') {
+      
+    }
+  }, [size])
 
   useGSAP(() => {
     gsap.to("#heading", {
