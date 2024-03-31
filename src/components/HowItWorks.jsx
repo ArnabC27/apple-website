@@ -17,14 +17,14 @@ const HowItWorks = () => {
       scale: 2,
       duration: 2,
       ease: "power2.inOut",
-    });
+    })
 
     animateWithGsap(".g_fadeIn", {
       opacity: 1,
       y: 0,
       duration: 1,
       ease: "power2.inOut",
-    });
+    })
   }, []);
 
   return (
@@ -80,7 +80,7 @@ const HowItWorks = () => {
               .
             </p>
 
-            <p className="feature-text g_fadeIn">
+            <p className="hiw-text g_fadeIn">
               Mobile{" "}
               <span className="text-white">
                 games will look and feel so immersive
