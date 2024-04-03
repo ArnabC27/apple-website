@@ -30,7 +30,7 @@ canvas {
 }
 
 body::-webkit-scrollbar {
-  display: none;
+  color: #000;
 }
 
 @layer utilities {
