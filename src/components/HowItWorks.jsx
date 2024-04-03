@@ -19,7 +19,7 @@ const HowItWorks = () => {
       ease: "power2.inOut",
     })
 
-    animateWithGsap(".g_fadeIn", {
+    gsap.to(".g_fadeIn", {
       opacity: 1,
       y: 0,
       duration: 1,
