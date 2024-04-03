@@ -29,9 +29,9 @@ canvas {
   max-width: 1120px;
 }
 
-body::-webkit-scrollbar {
+/*body::-webkit-scrollbar {
   color: #000;
-}
+}*/
 
 @layer utilities {
   .flex-center {
